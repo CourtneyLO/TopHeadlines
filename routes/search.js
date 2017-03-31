@@ -21,27 +21,22 @@ router.route('/')
         }
 
       }, function (error, response, body) {
-        console.log(body.results[0].results[0].summary.excerpt)
+        console.log(body.results[0].indexCount)
         res.format({
           html: function(){
-            console.log(body.results[0].results[0].title)
-            if(body.results[0].indexCount > 1){
+            if(body.results[0].indexCount > 0){
               var titles = []
               for(var i = 0; i < 20; i ++ ) {
                 titles.push(body.results[0].results[i].title)
               }
-            } else if( body.results[0].indexCount === 1){
-              titles = [{title: body.results[0].results[0].title.title}]
             } else {
               titles = [{title: "There are no articles on " + mySearch.search + ". Please search again"}]
             }
             res.render('index', {
               "NewsHeadlines": titles
-
             });
           },
         });
-
 
       });
     })

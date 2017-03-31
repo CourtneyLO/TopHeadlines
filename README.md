@@ -27,6 +27,7 @@ This is an web application that shows headlines of the latest news from the Fina
 
 ## Future Improvements
 
+- Improve appearance 
 - Add Testing
 - Refactor the code - not 'DRY' enough
 - Provide pagination   

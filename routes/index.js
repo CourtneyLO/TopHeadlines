@@ -18,16 +18,12 @@ router.route('/')
       }, function (error, response, body) {
         res.format({
           html: function(){
-            if(body.results[0].indexCount > 0){
-              var myArray = []
+              var titles = []
               for(var i = 0; i < 20; i ++ ) {
-                myArray.push(body.results[0].results[i].title)
+                titles.push(body.results[0].results[i].title)
               }
-            } else {
-              myArray = [{title: "There are no articles on " + mySearch.search + ". Please search again"}]
-            }
             res.render('index', {
-              "NewsHeadlines": myArray
+              "NewsHeadlines": titles
             });
           },
         });
