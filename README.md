@@ -5,10 +5,10 @@ Author: Courtney Osborn
 
 - heroku: https://topheadlines.herokuapp.com/
 
-## Further Access
+## Closer Look
 
 ```
-$ git clone
+$ git clone git@github.com:CourtneyLO/TopHeadlines.git
 $ npm install
 $ npm start
 visit localhost3000
@@ -27,7 +27,7 @@ This is an web application that shows headlines of the latest news from the Fina
 
 ## Future Improvements
 
-- Improve appearance 
+- Improve over all appearance
 - Add Testing
 - Refactor the code - not 'DRY' enough
 - Provide pagination   
