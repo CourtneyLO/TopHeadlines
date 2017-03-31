@@ -2,7 +2,7 @@ function SearchHeadlines() {
 
 }
 
-SearchHeadlines.prototype.getHeadlines = function(dataDisplayNews) {
+SearchHeadlines.prototype.getHeadlines = function() {
   var http = new XMLHttpRequest();
   var url = "http://localhost:3000/search";
   http.open("POST", url, true);

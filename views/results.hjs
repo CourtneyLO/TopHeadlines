@@ -437,7 +437,7 @@
     </div>
 		</div>
     <div>
-      <ul id="headline"></ul>
+      <ul id="search_headline"></ul>
     </div>
 
     <div>
@@ -477,5 +477,6 @@
 </footer>
 
 <script src="//origami-build.ft.com/v2/bundles/js?modules=o-footer%405.4.0%3A%2Fdemos%2Fsrc%2Fdemo.js%2Co-fonts"></script>
+<script src="/javascripts/SearchController.js"></script>
   </body>
 </html>
