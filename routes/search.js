@@ -33,7 +33,7 @@ router.route('/')
               myArray = [{title: "There are no articles on " + mySearch.search + ". Please search again"}]
             }
             res.render('results', {
-              "repo": myArray
+              "NewsHeadlines": myArray
             });
           },
         });
