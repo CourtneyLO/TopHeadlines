@@ -32,7 +32,7 @@ router.route('/')
             } else {
               myArray = [{title: "There are no articles on " + mySearch.search + ". Please search again"}]
             }
-            res.render('results', {
+            res.render('index', {
               "NewsHeadlines": myArray
             });
           },
