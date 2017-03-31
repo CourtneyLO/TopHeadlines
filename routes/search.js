@@ -28,7 +28,7 @@ router.route('/')
                     html: function(){
                         res.render('results', {
                               title: 'News Headlines',
-                              esult : body.results[0].results[0].title.title
+                              result : body.results[0].results[0].title.title
                           });
                     },
                 });
