@@ -12,7 +12,6 @@ function AllNewsHeadlines() {
     http.onreadystatechange = function() {
         if(http.readyState == 4 && http.status == 200) {
           this.text = JSON.parse(http.responseText)
-          console.log(this.text.results[0].results[0].title.title)
           displayNewsHeadlines(this.text);
         }
     }
