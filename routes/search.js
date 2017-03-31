@@ -17,16 +17,17 @@ router.route('/')
       "queryContext" : {
         "curations" : [ "ARTICLES"]},
         "resultContext" : {
-          "aspects" :[  "title","lifecycle","location","summary","editorial" ]}
+		        "aspects" :[  "title","lifecycle","location","summary","editorial" ],
+	           "maxResults" : "20"
+	          }
         }
 
       }, function (error, response, body) {
-        console.log(body.results[0].indexCount)
         res.format({
           html: function(){
             if(body.results[0].indexCount > 0){
               var titles = []
-              for(var i = 0; i < 20; i ++ ) {
+              for(var i = 0; i < body.results[0].results.length; i ++ ) {
                 titles.push(body.results[0].results[i].title)
               }
             } else {
