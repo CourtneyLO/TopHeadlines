@@ -4,9 +4,13 @@
     <title>Top Headlines</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="/javascripts/NewsHeadlines.js"></script>
+    <script src="/javascripts/displayNews.js"></script>
   </head>
   <body>
     <h1>Top Headlines</h1>
+    <div>
+      <ul id="headline"></ul>
+    </div>
     <script src="/javascripts/NewsController.js"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 window.onload = function() {
 
     var allNewsHeadlines = new AllNewsHeadlines();
-    allNewsHeadlines.getAllNewsHeadlines()
+    var displayNewsHeadlines = new DisplayNewsHeadlines()
+    allNewsHeadlines.getAllNewsHeadlines(displayNewsHeadlines.newsHeadlines.bind(allNewsHeadlines))
 }
