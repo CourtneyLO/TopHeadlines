@@ -20,7 +20,7 @@ router.route('/')
           html: function(){
             if(body.results[0].indexCount > 0){
               var myArray = []
-              for(var i = 0; i < body.results[0].results.length; i ++ ) {
+              for(var i = 0; i < 20; i ++ ) {
                 myArray.push(body.results[0].results[i].title)
               }
             } else {

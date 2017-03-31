@@ -21,18 +21,23 @@ router.route('/')
         }
 
       }, function (error, response, body) {
+        console.log(body.results[0].results[0].summary.excerpt)
         res.format({
           html: function(){
-            if(body.results[0].indexCount > 0){
-              var myArray = []
-              for(var i = 0; i < body.results[0].results.length; i ++ ) {
-                myArray.push(body.results[0].results[i].title)
+            console.log(body.results[0].results[0].title)
+            if(body.results[0].indexCount > 1){
+              var titles = []
+              for(var i = 0; i < 20; i ++ ) {
+                titles.push(body.results[0].results[i].title)
               }
+            } else if( body.results[0].indexCount === 1){
+              titles = [{title: body.results[0].results[0].title.title}]
             } else {
-              myArray = [{title: "There are no articles on " + mySearch.search + ". Please search again"}]
+              titles = [{title: "There are no articles on " + mySearch.search + ". Please search again"}]
             }
             res.render('index', {
-              "NewsHeadlines": myArray
+              "NewsHeadlines": titles
+
             });
           },
         });
