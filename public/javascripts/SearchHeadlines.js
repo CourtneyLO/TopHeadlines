@@ -2,7 +2,7 @@ function SearchHeadlines() {
 
 }
 
-SearchHeadlines.prototype.getHeadlines = function() {
+SearchHeadlines.prototype.getHeadlines = function(DisplaySearchHeadlines) {
   var http = new XMLHttpRequest();
   var url = "http://localhost:3000/search";
   http.open("POST", url, true);
@@ -12,6 +12,7 @@ SearchHeadlines.prototype.getHeadlines = function() {
         console.log(http.responseText)
         this.text = JSON.parse(http.responseText)
         console.log(this.text.results[0].title.title)
+        DisplaySearchHeadlines(this.text)
       }
   }
   http.send();

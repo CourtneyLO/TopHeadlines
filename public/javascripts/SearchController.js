@@ -2,6 +2,6 @@ window.onload = function() {
   console.log("Page has loaded")
 
     var searchHeadlines = new SearchHeadlines()
-    searchHeadlines.getHeadlines()
-
+    var displaySearchHeadline = new DisplaySearchHeadline()
+    searchHeadlines.getHeadlines(displaySearchHeadline.newsHeadlines.bind(searchHeadlines))
   };

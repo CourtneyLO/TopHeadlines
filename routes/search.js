@@ -4,8 +4,9 @@ var request = require("request");
 
 router.route('/')
   .post(function(req, res, next) {
+    // console.log(req.body.q)
   mySearch = {
-   search:req.body.search,
+   search:req.body.q,
  };
 
  request({
@@ -21,6 +22,7 @@ router.route('/')
      }
 
    }, function (error, response, body) {
+     console.log(mySearch.search)
       var jsonStr = JSON.stringify(body.results[0]);
       res.send(jsonStr)
    });

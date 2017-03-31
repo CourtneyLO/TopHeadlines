@@ -44,6 +44,7 @@
   	</script>
 
     <script src="/javascripts/SearchHeadlines.js"></script>
+    <script src="/javascripts/DisplaySearchHeadlines.js"></script>
   </head>
   <body>
     <header class="o-header o-header--simple" data-o-component="o-header" data-o-header--no-js="">
@@ -79,7 +80,7 @@
 
  <div id="o-header-search" class="o-header__row o-header__search o--if-js" role="search" data-o-header-search="">
    <div class="o-header__container">
-     <form class="o-header__search-form" action="/search" role="search" aria-label="Site search">
+     <form class="o-header__search-form" action="/search" role="search" aria-label="Site search" action="">
        <label class="o-header__visually-hidden" for="o-header-search-term-js">Search the <abbr title="Financial Times">FT</abbr></label>
        <input class="o-header__search-term" id="o-header-search-term-js" name="q" type="text" placeholder="Search the FT"></input>
        <button class="o-header__search-submit" type="submit">
@@ -439,16 +440,6 @@
     <div>
       <ul id="search_headline"></ul>
     </div>
-
-    <div>
-      <center><h3 id="heading"></h3></center>
-      <center><img id="image"></img><center></br>
-      <center><p id="date"></p></center>
-      <p id="summary"><p>
-
-    </div>
-
-
 
 
     <footer class="o-footer o-footer--theme-light" data-o-component="o-footer" data-o-footer--no-js="">
