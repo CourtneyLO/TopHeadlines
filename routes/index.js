@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var request = require("request");
+var keys = require('../keys')
 
 
 router.route('/')
 .get(function(req, res, next) {
   request({
-    uri: 'http://api.ft.com/content/search/v1?apiKey=ercgrchspx5ku37xnzngy5qq',
+    uri: 'http://api.ft.com/content/search/v1?apiKey=' + keys.api_key,
     json: true,
     method: 'POST',
     body: {
