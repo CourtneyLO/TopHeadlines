@@ -22,9 +22,20 @@ router.route('/')
      }
 
    }, function (error, response, body) {
-     console.log(mySearch.search)
-      var jsonStr = JSON.stringify(body.results[0]);
-      res.send(jsonStr)
+
+     res.format({
+
+                    html: function(){
+                        res.render('results', {
+                              title: 'News Headlines',
+                              esult : body.results[0].results[0].title.title
+                          });
+                    },
+                });
+                // result : body.results[0].results[0].title.title
+    //  console.log(mySearch.search)
+    //   var jsonStr = JSON.stringify(body.results[0]);
+    //   res.write(jsonStr)
    });
 })
 

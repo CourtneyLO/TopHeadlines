@@ -442,6 +442,9 @@
     </div>
 
 
+    {{result}}.
+
+
     <footer class="o-footer o-footer--theme-light" data-o-component="o-footer" data-o-footer--no-js="">
 	<div class="o-footer__container">
 		<div>
@@ -468,6 +471,6 @@
 </footer>
 
 <script src="//origami-build.ft.com/v2/bundles/js?modules=o-footer%405.4.0%3A%2Fdemos%2Fsrc%2Fdemo.js%2Co-fonts"></script>
-<script src="/javascripts/SearchController.js"></script>
+<!-- <script src="/javascripts/SearchController.js"></script> -->
   </body>
 </html>
