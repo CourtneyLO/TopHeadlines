@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var request = require("request");
-var keys = require('../keys')
 
 router.route('/')
 .post(function(req, res, next) {
@@ -10,7 +9,7 @@ router.route('/')
   };
 
   request({
-    uri: 'http://api.ft.com/content/search/v1?apiKey=' + keys.api_key,
+    uri: 'http://api.ft.com/content/search/v1?apiKey=' + process.env.API_KEY,
     json: true,
     method: 'POST',
     body: {
@@ -22,7 +21,6 @@ router.route('/')
         }
 
       }, function (error, response, body) {
-        console.log(mySearch.search)
         res.format({
           html: function(){
             if(body.results[0].indexCount > 0){
