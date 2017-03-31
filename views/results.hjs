@@ -45,6 +45,7 @@
 
     <script src="/javascripts/SearchHeadlines.js"></script>
     <script src="/javascripts/DisplaySearchHeadlines.js"></script>
+
   </head>
   <body>
     <header class="o-header o-header--simple" data-o-component="o-header" data-o-header--no-js="">
@@ -440,9 +441,12 @@
     <div>
       <ul id="search_headline"></ul>
     </div>
+    {{#repo}}
+    <br>{{title}}</br>
+  {{/repo}}
+    <!-- window.result = {{ result }}; -->
+    <div id='data'></div>
 
-
-    {{result}}.
 
 
     <footer class="o-footer o-footer--theme-light" data-o-component="o-footer" data-o-footer--no-js="">

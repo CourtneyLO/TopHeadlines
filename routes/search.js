@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var request = require("request");
 
+
 router.route('/')
   .post(function(req, res, next) {
     // console.log(req.body.q)
@@ -24,18 +25,27 @@ router.route('/')
    }, function (error, response, body) {
 
      res.format({
-
                     html: function(){
+                      var myArray = []
+      for(var i = 0; i < body.results[0].results.length; i ++ ) {
+         myArray.push(body.results[0].results[i].title)
+      }
+      console.log(myArray)
                         res.render('results', {
-                              title: 'News Headlines',
-                              result : body.results[0].results[0].title.title
+
+"repo": myArray
+
+
+
+
                           });
                     },
                 });
-                // result : body.results[0].results[0].title.title
+
     //  console.log(mySearch.search)
     //   var jsonStr = JSON.stringify(body.results[0]);
-    //   res.write(jsonStr)
+    //   res.(jsonStr)
+    // console.log('Follow: ' + team.join(' ') + '!');
    });
 })
 
