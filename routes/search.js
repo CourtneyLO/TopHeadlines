@@ -22,6 +22,7 @@ router.route('/')
         }
 
       }, function (error, response, body) {
+        console.log(mySearch.search)
         res.format({
           html: function(){
             if(body.results[0].indexCount > 0){
